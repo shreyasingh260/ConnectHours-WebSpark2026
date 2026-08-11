@@ -175,5 +175,6 @@ These are deliberately **not faked** in the demo:
 - Production-grade Supabase Auth + RLS migration
 
 ## Team
-
-Add the WebSpark 2026 team names here before submission.
+Shreya Singh
+Shrinkhla Saxena
+Rudraksh Chauhan
