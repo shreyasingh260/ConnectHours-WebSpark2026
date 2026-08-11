@@ -1,0 +1,10 @@
+export type Role='student'|'faculty'|'admin';
+export type AppointmentStatus='pending'|'confirmed'|'completed'|'cancelled'|'no_show'|'rejected';
+export type RiskLevel='low'|'medium'|'high';
+export interface User{id:string;name:string;email:string;password:string;role:Role;title?:string|null;department_id?:string|null;avatar?:string|null;office_location?:string|null;bio?:string|null;auto_approve?:number;created_at:string}
+export interface Department{id:string;name:string;code:string}
+export interface Subject{id:string;name:string;code:string;department_id:string}
+export interface OfficeHour{id:string;faculty_id:string;day_of_week:number;start_time:string;end_time:string;location:string;status:string;recurring:number;specific_date?:string|null;created_at:string}
+export interface Appointment{id:string;student_id:string;faculty_id:string;subject_id?:string|null;start_at:string;end_at:string;status:AppointmentStatus;reason?:string|null;mode:string;location?:string|null;created_at:string;updated_at:string}
+export interface WaitlistEntry{id:string;student_id:string;faculty_id:string;subject_id?:string|null;preferred_date?:string|null;preferred_start?:string|null;preferred_end?:string|null;status:string;created_at:string;updated_at:string}
+export interface NotificationRow{id:string;user_id:string;type:string;title:string;message:string;read:number;created_at:string}

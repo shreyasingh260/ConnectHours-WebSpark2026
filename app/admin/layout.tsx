@@ -1,0 +1,1 @@
+import {redirect} from 'next/navigation';import {getSession} from '@/lib/auth';export default function AdminLayout({children}:{children:React.ReactNode}){const s=getSession();if(!s||s.role!=='admin')redirect('/login');return children}

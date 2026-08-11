@@ -1,0 +1,1 @@
+import Sidebar from './Sidebar';import Topbar from './Topbar';export default function Shell({children,role,name,title}:{children:React.ReactNode;role:string;name:string;title:string}){return <><Sidebar role={role}/><Topbar name={name} title={title} role={role}/><main className='min-h-[calc(100vh-73px)] px-4 py-6 lg:ml-60 lg:px-8'>{children}</main></>}

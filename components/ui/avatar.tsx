@@ -1,0 +1,1 @@
+export function Avatar({name,size='md'}:{name:string;size?:'sm'|'md'|'lg'}){const s={sm:'h-8 w-8 text-xs',md:'h-10 w-10 text-sm',lg:'h-12 w-12 text-base'}[size];return <div className={`${s} flex shrink-0 items-center justify-center rounded-full bg-ink-100 font-semibold text-ink-600`}>{name.split(' ').map(x=>x[0]).slice(0,2).join('')}</div>}
